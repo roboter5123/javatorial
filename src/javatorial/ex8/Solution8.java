@@ -17,15 +17,17 @@ public class Solution8 {
 		System.out.println("Enter a calculation:");
 		String input = scanner.nextLine();
 		double result;
+		double value1 = Double.parseDouble(input.substring(0, 1));
+		double value2 = Double.parseDouble(input.substring(2, 3));
 		if (input.charAt(1) == '+'){
 			System.out.println();
-			result = Double.parseDouble(input.substring(0, 1)) + Double.parseDouble(input.substring(2, 3));
+			result = value1 + value2;
 		} else if (input.charAt(1) == '-') {
-			result = Double.parseDouble(input.substring(0, 1)) - Double.parseDouble(input.substring(2, 3));
+			result = value1 - value2;
 		} else if (input.charAt(1) == '*') {
-			result = Double.parseDouble(input.substring(0, 1)) * Double.parseDouble(input.substring(2, 3));
+			result = value1 * value2;
 		} else if (input.charAt(1) == '/') {
-			result = Double.parseDouble(input.substring(0, 1)) / Double.parseDouble(input.substring(2, 3));
+			result = value1 / value2;
 		}else {
 			System.out.println("Could not recognise calculation");
 			return;
